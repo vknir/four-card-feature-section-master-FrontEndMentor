@@ -1,0 +1,161 @@
+/* CSS Reset by https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+* {
+  margin: 0;
+}
+
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+
+#root, #__next {
+  isolation: isolate;
+}
+
+
+/* Specifying all constanst in root */
+
+:root{
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-blue:hsl(212, 86%, 64%);
+  --color-orange:hsl(34, 97%, 64%);
+
+  --fw-light: 200;
+  --fw-normal:400;
+  --fw-bold:600;
+  
+  --fs-normal:0.9375rem;
+  --fs-h1:1.5625rem;
+  --fs-h2:1.25rem;
+  --fs-bigger:1rem;
+  
+  --color-normal:hsl(229, 6%, 66%);
+  --color-shadow:hsl(0, 0%, 98%);
+  --color-heading:hsl(235, 17%, 40%);
+
+  font-family: "Poppins", system-ui;
+  
+}
+
+
+/* styling wrapper */
+.wrapper{
+  margin-block: 10%;
+  margin-inline: 7%;
+}
+
+
+/* styling header */
+
+header{
+  text-align: center;
+  color: var(--color-normal);
+}
+
+header h1{
+  font-weight: var(--fw-bold);
+  color: var(--color-heading);
+  font-size: var(--fs-h1);
+}
+
+header  h1 span{
+  font-weight: var(--fw-light);
+  display: block;
+}
+
+header p{
+  margin-block-start: 1rem;
+  font-size: var(--fs-bigger);
+}
+
+/* styling card-wrapper */
+
+.card-wrapper{
+  margin-block-start: 4rem;
+  display: flex;
+
+  flex-direction: column;
+  font-size: var(--fs-normal);
+
+  
+  flex: 1 0 auto ;
+
+  color: var(--color-normal);
+}
+
+
+@media(min-width: 1440px)
+{
+  .card-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+
+
+/* styling card */
+
+.card{
+  padding: 10%;
+  box-shadow: 0 .3rem .625rem var(--color-normal);
+  border-radius: .6rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h2{
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  color: var(--color-heading);
+  margin-bottom: .5rem;
+}
+
+.card img{
+  margin-left: auto; 
+  margin-top: 1rem;
+}
+
+ .blue{
+  border-top: 4px solid var(--color-blue);
+}
+
+.red{
+  border-top: 4px solid var(--color-red);
+}
+
+.orange{
+  border-top: 4px solid var(--color-orange);
+}
+
+.cyan{
+  border-top: 4px solid var(--color-cyan);
+}
